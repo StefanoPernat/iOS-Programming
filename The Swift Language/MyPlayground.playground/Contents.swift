@@ -76,3 +76,44 @@ let space42Assignee: String? = nameByParkingSpace[42]
 if let space27Assignee = nameByParkingSpace[27] {
     print("Key 27 is assigned in the dictionary")
 }
+
+// Loops and String interpolation
+let range = 0..<countingUp.count
+for i in range {
+    print(countingUp[i])
+}
+
+for string in countingUp {
+    print(string)
+}
+
+for (pos, string) in countingUp.enumerated() {
+    print("\(pos): \(string)")
+}
+
+for (parkingSpace, name) in nameByParkingSpace {
+    print("\(parkingSpace) is assigned to \(name)")
+}
+
+enum PieType: Int {
+    case apple = 0
+    case cherry
+    case pecan
+}
+
+let favouritePie = PieType.apple
+
+let name: String
+switch favouritePie {
+case .apple:
+    name = "Apple"
+case .cherry:
+    name = "Cherry"
+case .pecan:
+    name = "Pecan"
+}
+
+let pieRawValue = PieType.pecan.rawValue
+if let pieType = PieType(rawValue: 1) {
+    print(PieType)
+}
