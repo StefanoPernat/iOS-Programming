@@ -12,3 +12,9 @@ let constStr = str
 var nextYear: Int
 var bodyTemp: Float
 var hasPet: Bool
+
+// Collections types
+var arrayOfInts: [Int]  // shorthand sintax, real syntax: var arrayOfInts: Array<Int>
+var dictionaryOfCapitalsByCountry: [String: String] // shorthand sintax, real syntax: var dictionaryOfCapitalsByCountry: Dictionary<String, String>
+var winningLotteryNumbers: Set<Int>
+
