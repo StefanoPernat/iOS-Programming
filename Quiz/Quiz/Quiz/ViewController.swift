@@ -30,11 +30,16 @@ class ViewController: UIViewController {
     
     // Actions
     @IBAction func showNextQuestion(_ sender: UIButton) {
-        
+        currentQuestionIndex += 1
+        if currentQuestionIndex == questions.count {
+            currentQuestionIndex = 0
+        }
+        questionLabel.text = questions[currentQuestionIndex]
+        answerLabel.text = "???"
     }
     
     @IBAction func showAnswer(_ sender: UIButton) {
-        
+        answerLabel.text = answers[currentQuestionIndex]
     }
 }
 
