@@ -49,3 +49,30 @@ let floatingPi: Float = 3.14
 countingUp.count
 emptyString.isEmpty
 countingUp.append("three")
+
+// optionals
+var reading1: Float?
+var reading2: Float?
+var reading3: Float?
+
+reading1 = 9.8
+reading2 = 9.2
+reading3 = 9.7
+
+// force unwrapping
+let avgReading = (reading1! + reading2! + reading3!) / 3
+
+// optional binding
+if let r1 = reading1, let r2 = reading2, let r3 = reading3 {
+    let avgReading = (r1 + r2 + r3) / 3
+} else {
+    let errorString = "Instrument reported a reading that was nil."
+}
+
+// subscripting dictionaries is always an optional
+let space13Assignee = nameByParkingSpace[13]
+let space42Assignee: String? = nameByParkingSpace[42]
+
+if let space27Assignee = nameByParkingSpace[27] {
+    print("Key 27 is assigned in the dictionary")
+}
