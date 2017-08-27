@@ -28,6 +28,11 @@ class ViewController: UIViewController {
     
     var currentQuestionIndex: Int = 0
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        questionLabel.text = questions[currentQuestionIndex]
+    }
+    
     // Actions
     @IBAction func showNextQuestion(_ sender: UIButton) {
         currentQuestionIndex += 1
