@@ -7,3 +7,8 @@ str = "Hello, Swift"
 
 let constStr = str
 //constStr = "Hello, world"
+
+// type annotations
+var nextYear: Int
+var bodyTemp: Float
+var hasPet: Bool
