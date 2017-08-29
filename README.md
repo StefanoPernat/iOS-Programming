@@ -9,4 +9,5 @@ I have changed also the default app icon, and generated a launchscreen from main
 
 ## The Swift Language
 
-
+Experienced the basics of the Swift language, like *Variables and Constants*, *Type Annotation*,  
+**Collection Types**, **Initializers**, **Properties**, **Instance methods**, **Optionals**, **Loops**, **Enumeration**. 

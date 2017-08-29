@@ -114,6 +114,6 @@ case .pecan:
 }
 
 let pieRawValue = PieType.pecan.rawValue
-if let pieType = PieType(rawValue: 1) {
-    print(PieType)
+if let pieType = PieType(rawValue: 9) {
+    print(pieType)
 }
