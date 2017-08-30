@@ -11,3 +11,8 @@ I have changed also the default app icon, and generated a launchscreen from main
 
 Experienced the basics of the Swift language, like *Variables and Constants*, *Type Annotation*,  
 **Collection Types**, **Initializers**, **Properties**, **Instance methods**, **Optionals**, **Loops**, **Enumeration**. 
+
+## Views and the View Hierarchy
+
+Learned about Autolayout, through Interface Builder I learned how to use Autolayout for making the layout consistent on multiple resolution and screen sizes.  
+I also practiced creating views programmatically, in this way I learned about iOS views hierarchy.
