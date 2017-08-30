@@ -14,6 +14,7 @@ import UIKit
 class ConversionViewController: UIViewController {
     // IBOutlets
     @IBOutlet weak var celsiusLabel: UILabel!
+    @IBOutlet weak var fahrenheitTextField: UITextField!
     
     // IBActions
     @IBAction func fahrenheitTextFieldEditingChanged(_ textField: UITextField) {

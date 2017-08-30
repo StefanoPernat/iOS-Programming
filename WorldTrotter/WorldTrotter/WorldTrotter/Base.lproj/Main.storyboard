@@ -74,6 +74,7 @@
                     </view>
                     <connections>
                         <outlet property="celsiusLabel" destination="biX-sH-s3H" id="QQO-eP-aes"/>
+                        <outlet property="fahrenheitTextField" destination="cjH-jj-Ach" id="wSz-44-0oZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
