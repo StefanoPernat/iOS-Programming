@@ -24,6 +24,13 @@ class ViewController: UIViewController {
         
         // adding view programmatically: adding the new view to the root view
         view.addSubview(firstView)
+        
+        // let's create a second view
+        let secondFrame = CGRect(x: 20, y: 30, width: 50, height: 50)
+        let secondView = UIView(frame: secondFrame)
+        secondView.backgroundColor = UIColor.green
+        
+        view.addSubview(secondView)
     }
 }
 
