@@ -16,3 +16,5 @@ Experienced the basics of the Swift language, like *Variables and Constants*, *T
 
 Learned about Autolayout, through Interface Builder I learned how to use Autolayout for making the layout consistent on multiple resolution and screen sizes.  
 I also practiced creating views programmatically, in this way I learned about iOS views hierarchy.
+
+> **Bronze Challenge**: Remove all the constraints from **View Conroller** interface and then add them back in. Try to do this without consulting the book.
