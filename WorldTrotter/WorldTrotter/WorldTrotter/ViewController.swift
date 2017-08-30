@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         let secondView = UIView(frame: secondFrame)
         secondView.backgroundColor = UIColor.green
         
-        view.addSubview(secondView)
+        firstView.addSubview(secondView)
     }
 }
 
