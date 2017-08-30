@@ -12,6 +12,21 @@
 import UIKit
 
 class ConversionViewController: UIViewController {
+    // Model
+    var fahrenheitValue: Measurement<UnitTemperature>? {
+        didSet {
+            updateCelsiusLabel()
+        }
+    }
+    
+    var celsiusValue: Measurement<UnitTemperature>? {
+        if let fahrenheitDegrees = fahrenheitValue {
+            return fahrenheitDegrees.converted(to: .celsius)
+        } else {
+            return nil
+        }
+    }
+    
     // IBOutlets
     @IBOutlet weak var celsiusLabel: UILabel!
     @IBOutlet weak var fahrenheitTextField: UITextField!
@@ -20,14 +35,22 @@ class ConversionViewController: UIViewController {
     @IBAction func fahrenheitTextFieldEditingChanged(_ textField: UITextField) {
         //celsiusLabel.text = textField.text
         
-        if let fahrenheitText = textField.text, !fahrenheitText.isEmpty {
-            celsiusLabel.text = fahrenheitText
+        if let fahrenheitText = textField.text, let value = Double(fahrenheitText) {
+            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
         } else {
-            celsiusLabel.text = "???"
+            fahrenheitValue = nil
         }
     }
     
     @IBAction func dismissKeyboard(_ sender: UIGestureRecognizer) {
         fahrenheitTextField.resignFirstResponder()
+    }
+    
+    func updateCelsiusLabel() {
+        if let celsiusDegrees = celsiusValue {
+            celsiusLabel.text = "\(celsiusDegrees.value)"
+        } else {
+            celsiusLabel.text = "???"
+        }
     }
 }
