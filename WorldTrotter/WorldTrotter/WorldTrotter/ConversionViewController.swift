@@ -26,4 +26,8 @@ class ConversionViewController: UIViewController {
             celsiusLabel.text = "???"
         }
     }
+    
+    @IBAction func dismissKeyboard(_ sender: UIGestureRecognizer) {
+        fahrenheitTextField.resignFirstResponder()
+    }
 }
