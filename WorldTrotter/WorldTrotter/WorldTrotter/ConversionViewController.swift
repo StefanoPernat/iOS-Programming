@@ -31,6 +31,12 @@ class ConversionViewController: UIViewController {
     @IBOutlet weak var celsiusLabel: UILabel!
     @IBOutlet weak var fahrenheitTextField: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        updateCelsiusLabel()
+    }
+    
     // IBActions
     @IBAction func fahrenheitTextFieldEditingChanged(_ textField: UITextField) {
         //celsiusLabel.text = textField.text
@@ -42,6 +48,7 @@ class ConversionViewController: UIViewController {
         }
     }
     
+    // Dismiss the keyboard
     @IBAction func dismissKeyboard(_ sender: UIGestureRecognizer) {
         fahrenheitTextField.resignFirstResponder()
     }
