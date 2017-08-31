@@ -25,4 +25,5 @@ WorldTrotter tought me about UITextField properties, property observers, compute
 I learned also to use in a very simple way the UIGestureRecognizer, last but not least I learned about delegates.  
 
 > **Bronze Challenge**: the user can enter alphabetic characters either by using a bluetooth keyboard or by pasting copied text into the text field. Fix the issue
+
 > *Hint*: use NSCharacterSet class
