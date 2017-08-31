@@ -11,7 +11,7 @@
 
 import UIKit
 
-class ConversionViewController: UIViewController {
+class ConversionViewController: UIViewController, UITextFieldDelegate {
     // Model
     var fahrenheitValue: Measurement<UnitTemperature>? {
         didSet {
@@ -68,6 +68,20 @@ class ConversionViewController: UIViewController {
             celsiusLabel.text = numberFormatter.string(from: NSNumber(value: celsiusDegrees.value))
         } else {
             celsiusLabel.text = "???"
+        }
+    }
+    
+    // Delegate for Fahrenheit UITextField
+    // this won't allow to enter a multiple decimal separator in the fahrenheit text field
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let currentTextHasDecimalSeparator = textField.text?.range(of: ".")
+        let replacementTextHasDecimalSeparator = string.range(of: ".")
+        
+        if currentTextHasDecimalSeparator != nil, replacementTextHasDecimalSeparator != nil {
+            return false
+        } else {
+            return true
         }
     }
 }
