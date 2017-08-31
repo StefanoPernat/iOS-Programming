@@ -27,6 +27,15 @@ class ConversionViewController: UIViewController {
         }
     }
     
+    // format number to display 1 digit as precision
+    let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    }()
+    
     // IBOutlets
     @IBOutlet weak var celsiusLabel: UILabel!
     @IBOutlet weak var fahrenheitTextField: UITextField!
@@ -55,7 +64,8 @@ class ConversionViewController: UIViewController {
     
     func updateCelsiusLabel() {
         if let celsiusDegrees = celsiusValue {
-            celsiusLabel.text = "\(celsiusDegrees.value)"
+            //celsiusLabel.text = "\(celsiusDegrees.value)"
+            celsiusLabel.text = numberFormatter.string(from: NSNumber(value: celsiusDegrees.value))
         } else {
             celsiusLabel.text = "???"
         }
