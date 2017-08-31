@@ -94,17 +94,7 @@
         <!--View Controller-->
         <scene sceneID="ukI-8H-8CH">
             <objects>
-                <viewController id="uDg-OS-im6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6Sb-v2-zAc"/>
-                        <viewControllerLayoutGuide type="bottom" id="svC-rf-b4B"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CEN-e6-0Ua">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
+                <viewController id="uDg-OS-im6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAl-gb-I7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-591" y="127"/>
