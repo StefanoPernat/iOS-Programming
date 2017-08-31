@@ -18,3 +18,11 @@ Learned about Autolayout, through Interface Builder I learned how to use Autolay
 I also practiced creating views programmatically, in this way I learned about iOS views hierarchy.
 
 > **Bronze Challenge**: Remove all the constraints from **View Conroller** interface and then add them back in. Try to do this without consulting the book.
+
+## Text Input and Delegation
+
+WorldTrotter tought me about UITextField properties, property observers, computed properties and closures.  
+I learned also to use in a very simple way the UIGestureRecognizer, last but not least I learned about delegates.  
+
+> **Bronze Challenge**: the user can enter alphabetic characters either by using a bluetooth keyboard or by pasting copied text into the text field. Fix the issue
+> *Hint*: use NSCharacterSet class
