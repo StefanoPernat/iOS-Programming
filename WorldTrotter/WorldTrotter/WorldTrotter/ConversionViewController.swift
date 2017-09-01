@@ -54,7 +54,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         // change background color based on the part of the day
         let hour = Calendar.current.component(.hour, from: Date())
         if hour > 15 {
-            view.backgroundColor = UIColor(red: 10.0/255, green: 11.0/255, blue: 14.0/255, alpha: 1.0)
+            view.backgroundColor = UIColor(red: 95.0/255, green: 94.0/255, blue: 95.0/255, alpha: 1.0)
         }
         
     }
