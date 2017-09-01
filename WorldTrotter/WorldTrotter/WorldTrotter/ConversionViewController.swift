@@ -13,6 +13,8 @@ import UIKit
 
 class ConversionViewController: UIViewController, UITextFieldDelegate {
     // Model
+    let darkColorHour = 15
+    
     var fahrenheitValue: Measurement<UnitTemperature>? {
         didSet {
             updateCelsiusLabel()
@@ -52,8 +54,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         
         // change background color based on the part of the day
-        let hour = Calendar.current.component(.hour, from: Date())
-        if hour > 15 {
+        let currentHour = Calendar.current.component(.hour, from: Date())
+        if currentHour > darkColorHour {
             view.backgroundColor = UIColor(red: 95.0/255, green: 94.0/255, blue: 95.0/255, alpha: 1.0)
         }
         
