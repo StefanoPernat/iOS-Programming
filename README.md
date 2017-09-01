@@ -27,3 +27,11 @@ I learned also to use in a very simple way the UIGestureRecognizer, last but not
 > **Bronze Challenge**: the user can enter alphabetic characters either by using a bluetooth keyboard or by pasting copied text into the text field. Fix the issue
 
 > *Hint*: use NSCharacterSet class
+
+## View Controllers
+
+In this chapter I learned to add a new ViewController to the storyboard, I also experienced a new type of ViewController (UITabBarController) that manages via an array multiple controllers at once, and it has also a TabBar with titles and images for every ViewControllers.  
+I also learned a little bit more about the view controller lifecycle methods and graphics.
+
+> **Silver Challenge**: Whenever the ConversionViewController is viewed update its background color based on the time of day.  
+In the evening the background should be a dark color, otherwise the background should be a light color.  (override viewWillAppear to accomplish this)
