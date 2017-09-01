@@ -48,6 +48,17 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         updateCelsiusLabel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // change background color based on the part of the day
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour > 15 {
+            view.backgroundColor = UIColor(red: 10.0/255, green: 11.0/255, blue: 14.0/255, alpha: 1.0)
+        }
+        
+    }
+    
     // IBActions
     @IBAction func fahrenheitTextFieldEditingChanged(_ textField: UITextField) {
         //celsiusLabel.text = textField.text
