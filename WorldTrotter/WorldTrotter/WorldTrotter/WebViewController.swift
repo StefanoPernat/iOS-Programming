@@ -12,5 +12,14 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController {
+    let pageToLoad = "www.bignerdranch.com"
+    var webView: WKWebView!
     
+    override func viewDidLoad() {
+        webView = WKWebView()
+        webView.load(URLRequest(url: URL(string: "https://\(pageToLoad)")!))
+        
+        view = webView
+        print("WebViewController loaded its view")
+    }
 }
