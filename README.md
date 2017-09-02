@@ -35,3 +35,14 @@ I also learned a little bit more about the view controller lifecycle methods and
 
 > **Silver Challenge**: Whenever the ConversionViewController is viewed update its background color based on the time of day.  
 In the evening the background should be a dark color, otherwise the background should be a light color.  (override viewWillAppear to accomplish this)
+
+## Programmatic Views
+
+In this chapter I learned to create some views programmatically, I was also able to define some constraints in code (using anchors and margins).  
+I used a UISegmentedControl for the first time, and defined an action programmatically with the addTarget method.
+
+> **Bronze Challenge**: create a new view controller and add it to the TabBarViewController, this ViewController should display a VKWebView (class used to display web content). The WebView should display [www.bignerdranch.com](http://www.bignerdranch.com).
+
+> **Silver Challenge**: Add a button to the MapViewController that displays and zooms in to the user current location (you need to use delegation *VKWebViewDelegate*)
+
+> **Gold Challenge**: MapView can display pins, which are instances of MKPinAnnotationView, add those pins to the map view: one **where you where born**, one **where you are now**, one at an interesting location you have visited in the past. Then add a button to the interface that allows the map to display the location of a pin. Subsequent taps shoud simply cycle through the list of pins. 
