@@ -90,15 +90,17 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="278" y="439"/>
+            <point key="canvasLocation" x="548" y="196"/>
         </scene>
-        <!--View Controller-->
+        <!--Browse-->
         <scene sceneID="f5w-dD-JXc">
             <objects>
-                <viewController id="KIl-bc-rJz" sceneMemberID="viewController"/>
+                <viewController id="KIl-bc-rJz" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browse" id="ovH-eQ-aWE"/>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lMn-nc-sXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="1088"/>
+            <point key="canvasLocation" x="548" y="976"/>
         </scene>
         <!--Map-->
         <scene sceneID="ukI-8H-8CH">
@@ -108,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAl-gb-I7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="-314"/>
+            <point key="canvasLocation" x="548" y="-569"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="APT-ec-DA1">
@@ -123,6 +125,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WGT-e0-FJ1"/>
                         <segue destination="uDg-OS-im6" kind="relationship" relationship="viewControllers" id="R6G-CO-UH0"/>
+                        <segue destination="KIl-bc-rJz" kind="relationship" relationship="viewControllers" id="wOY-f8-28N"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1b0-F2-ozi" userLabel="First Responder" sceneMemberID="firstResponder"/>
