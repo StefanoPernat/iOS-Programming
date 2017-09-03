@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
-    var mapView: MKMapView!
+    weak var mapView: MKMapView!
     
     override func loadView() {
         // when the MapViewController is created I will create a MapView programmatically
@@ -48,6 +48,25 @@ class MapViewController: UIViewController {
         
         // adding an action programmatically
         segmentedControl.addTarget(self, action: #selector(mapTypeChanged(_:)), for: .valueChanged)
+        
+        // Add button for silver challenge
+        let findMeButton = UIButton(type: .system)
+        findMeButton.setTitle("Find Me", for: .normal)
+        findMeButton.backgroundColor = UIColor(red: 225.0/255, green: 88.0/255, blue: 41.0/255, alpha: 1.0)
+        findMeButton.setTitleColor(UIColor.white, for: .normal)
+        findMeButton.layer.borderWidth = 1.0
+        findMeButton.layer.borderColor = UIColor(red: 95.0/255, green: 94.0/255, blue: 95.0/255, alpha: 1.0).cgColor
+        findMeButton.translatesAutoresizingMaskIntoConstraints = false
+        findMeButton.layer.cornerRadius = 10
+        findMeButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
+        view.addSubview(findMeButton)
+        
+        let buttonBottomConstraint = findMeButton.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -10)
+        let buttonTrailingConstraint = findMeButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+        
+        buttonBottomConstraint.isActive = true
+        buttonTrailingConstraint.isActive = true
     }
     
     func mapTypeChanged(_ segmentedControl: UISegmentedControl) {
