@@ -98,5 +98,7 @@ class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         print("User Location is updated")
+        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 500, 500)
+        mapView.setRegion(region, animated: true)
     }
 }
