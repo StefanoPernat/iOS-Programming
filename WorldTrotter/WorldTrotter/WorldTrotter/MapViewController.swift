@@ -12,6 +12,8 @@ import MapKit
 class MapViewController: UIViewController {
     weak var mapView: MKMapView!
     
+    let locationManager = CLLocationManager()
+    
     override func loadView() {
         // when the MapViewController is created I will create a MapView programmatically
         // and set this as the main view of MapViewController
