@@ -85,6 +85,6 @@ class MapViewController: UIViewController {
     }
     
     func findMeTapped(_ sender: UIButton) {
-        print("find me is tapped")
+        print("\((sender.titleLabel?.text)!): find me is tapped")
     }
 }

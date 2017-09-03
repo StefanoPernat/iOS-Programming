@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUsageDescription</key>
+	<string>$(PRODUCT_NAME) requires your location</string>
 </dict>
 </plist>
