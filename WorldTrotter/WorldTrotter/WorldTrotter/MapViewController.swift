@@ -60,6 +60,8 @@ class MapViewController: UIViewController {
         findMeButton.layer.cornerRadius = 10
         findMeButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         
+        findMeButton.addTarget(self, action: #selector(findMeTapped(_:)), for: .touchUpInside)
+        
         view.addSubview(findMeButton)
         
         let buttonBottomConstraint = findMeButton.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -10)
@@ -80,5 +82,9 @@ class MapViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    func findMeTapped(_ sender: UIButton) {
+        print("find me is tapped")
     }
 }
