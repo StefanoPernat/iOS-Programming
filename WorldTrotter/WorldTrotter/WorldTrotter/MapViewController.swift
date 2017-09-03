@@ -90,3 +90,10 @@ class MapViewController: UIViewController {
         print("\((sender.titleLabel?.text)!): find me is tapped")
     }
 }
+
+// extension, adding the MKMapViewDelegate
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        print("User Location is updated")
+    }
+}
