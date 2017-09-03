@@ -88,6 +88,8 @@ class MapViewController: UIViewController {
     
     func findMeTapped(_ sender: UIButton) {
         print("\((sender.titleLabel?.text)!): find me is tapped")
+        locationManager.requestWhenInUseAuthorization()
+        mapView.showsUserLocation = !mapView.showsUserLocation
     }
 }
 
