@@ -27,6 +27,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         print("MapViewController loaded its view")
+        mapView.delegate = self
     }
     
     func setupControlsAndConstraints() {
