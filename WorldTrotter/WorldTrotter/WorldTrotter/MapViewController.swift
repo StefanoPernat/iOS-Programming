@@ -13,6 +13,8 @@ class MapViewController: UIViewController {
     weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
+    var locationIndex = 0
+    var favoriteLocations = [MKPointAnnotation]()
     
     override func loadView() {
         // when the MapViewController is created I will create a MapView programmatically
@@ -91,6 +93,15 @@ class MapViewController: UIViewController {
         print("\((sender.titleLabel?.text)!): find me is tapped")
         locationManager.requestWhenInUseAuthorization()
         mapView.showsUserLocation = !mapView.showsUserLocation
+    }
+    
+    func createPointAnnotatioWithn(_ title: String, atLatitude latitude: Double, andLongitude longitude: Double) -> MKPointAnnotation {
+        let pin = MKPointAnnotation()
+        
+        pin.title = title
+        pin.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
+        return pin
     }
 }
 
