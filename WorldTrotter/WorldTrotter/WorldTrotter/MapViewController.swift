@@ -143,4 +143,19 @@ extension MapViewController: MKMapViewDelegate {
         let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 500, 500)
         mapView.setRegion(region, animated: true)
     }
+    
+    // delegate methods for when adding a pin view
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var pin = mapView.dequeueReusableAnnotationView(withIdentifier: "") as? MKPinAnnotationView
+        if pin == nil {
+            pin = MKPinAnnotationView(annotation: favoriteLocations[locationIndex], reuseIdentifier: "")
+            pin?.canShowCallout = true
+            pin?.animatesDrop = true
+            pin?.tintColor = MKPinAnnotationView.greenPinColor()
+        } else {
+            pin?.annotation = favoriteLocations[locationIndex]
+        }
+        
+        return pin
+    }
 }
