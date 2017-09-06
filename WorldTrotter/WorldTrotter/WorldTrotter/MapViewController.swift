@@ -89,6 +89,7 @@ class MapViewController: UIViewController {
         nextLocationButton.layer.cornerRadius = 10
         nextLocationButton.translatesAutoresizingMaskIntoConstraints = false
         nextLocationButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        nextLocationButton.addTarget(self, action: #selector(showNextLocation(_:)), for: .touchUpInside)
         
         view.addSubview(nextLocationButton)
         
@@ -125,6 +126,13 @@ class MapViewController: UIViewController {
         pin.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         
         return pin
+    }
+    
+    func showNextLocation(_ sender: UIButton) {
+        let region = MKCoordinateRegionMakeWithDistance(favoriteLocations[locationIndex].coordinate, 700, 700)
+        mapView.setRegion(region, animated: true)
+        mapView.addAnnotation(favoriteLocations[locationIndex])
+        locationIndex = (locationIndex + 1) % 3
     }
 }
 
