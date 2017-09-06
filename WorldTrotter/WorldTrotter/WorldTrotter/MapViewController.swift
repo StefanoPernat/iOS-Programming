@@ -22,6 +22,10 @@ class MapViewController: UIViewController {
         mapView = MKMapView()
         view = mapView
         
+        favoriteLocations.append(createPointAnnotationWith("Where I'm born", atLatitude: 46.0747793, andLongitude: 11.121748600000046))
+        favoriteLocations.append(createPointAnnotationWith("In pineta con Patty", atLatitude: 45.823386, andLongitude: 10.960835999999972))
+        favoriteLocations.append(createPointAnnotationWith("Where I'm now", atLatitude: 45.8691, andLongitude: 11.073840000000018))
+        
         setupControlsAndConstraints()
     }
     
@@ -95,7 +99,7 @@ class MapViewController: UIViewController {
         mapView.showsUserLocation = !mapView.showsUserLocation
     }
     
-    func createPointAnnotatioWithn(_ title: String, atLatitude latitude: Double, andLongitude longitude: Double) -> MKPointAnnotation {
+    func createPointAnnotationWith(_ title: String, atLatitude latitude: Double, andLongitude longitude: Double) -> MKPointAnnotation {
         let pin = MKPointAnnotation()
         
         pin.title = title
