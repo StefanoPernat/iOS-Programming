@@ -78,6 +78,25 @@ class MapViewController: UIViewController {
         
         buttonBottomConstraint.isActive = true
         buttonTrailingConstraint.isActive = true
+        
+        // Adding button for Gold Challenges
+        let nextLocationButton = UIButton(type: .system)
+        nextLocationButton.setTitle("Show Next Location", for: .normal)
+        nextLocationButton.backgroundColor = UIColor(red: 225.0/255, green: 88.0/255, blue: 41.0/255, alpha: 1.0)
+        nextLocationButton.setTitleColor(UIColor.white, for: .normal)
+        nextLocationButton.layer.borderWidth = 1.0
+        nextLocationButton.layer.borderColor = UIColor(red: 95.0/255, green: 94.0/255, blue: 95.0/255, alpha: 1.0).cgColor
+        nextLocationButton.layer.cornerRadius = 10
+        nextLocationButton.translatesAutoresizingMaskIntoConstraints = false
+        nextLocationButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
+        view.addSubview(nextLocationButton)
+        
+        let nextButtonBottomConstraint = nextLocationButton.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -10)
+        let nextButtonLeadingConstraint = nextLocationButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
+        
+        nextButtonBottomConstraint.isActive = true
+        nextButtonLeadingConstraint.isActive = true
     }
     
     func mapTypeChanged(_ segmentedControl: UISegmentedControl) {
