@@ -16,6 +16,7 @@ class MapViewController: UIViewController {
     var locationIndex = 0
     var favoriteLocations = [MKPointAnnotation]()
     
+    
     override func loadView() {
         // when the MapViewController is created I will create a MapView programmatically
         // and set this as the main view of MapViewController
@@ -37,7 +38,15 @@ class MapViewController: UIViewController {
     }
     
     func setupControlsAndConstraints() {
-        let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
+        
+        // localized strings
+        let standardString = NSLocalizedString("Standard", comment: "Standard Map View")
+        let hybridString = NSLocalizedString("Hybrid", comment: "Hybrid Map View")
+        let satelliteString = NSLocalizedString("Satellite", comment: "Satellite Map View")
+        let findMeString = NSLocalizedString("Find Me", comment: "Find Me button label")
+        let nextLocationString = NSLocalizedString("Next Location", comment: "Next Location button label")
+        
+        let segmentedControl = UISegmentedControl(items: [standardString, hybridString, satelliteString])
         segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
@@ -60,7 +69,7 @@ class MapViewController: UIViewController {
         
         // Add button for silver challenge
         let findMeButton = UIButton(type: .system)
-        findMeButton.setTitle("Find Me", for: .normal)
+        findMeButton.setTitle(findMeString, for: .normal)
         findMeButton.backgroundColor = UIColor(red: 225.0/255, green: 88.0/255, blue: 41.0/255, alpha: 1.0)
         findMeButton.setTitleColor(UIColor.white, for: .normal)
         findMeButton.layer.borderWidth = 1.0
@@ -81,7 +90,7 @@ class MapViewController: UIViewController {
         
         // Adding button for Gold Challenges
         let nextLocationButton = UIButton(type: .system)
-        nextLocationButton.setTitle("Show Next Location", for: .normal)
+        nextLocationButton.setTitle(nextLocationString, for: .normal)
         nextLocationButton.backgroundColor = UIColor(red: 225.0/255, green: 88.0/255, blue: 41.0/255, alpha: 1.0)
         nextLocationButton.setTitleColor(UIColor.white, for: .normal)
         nextLocationButton.layer.borderWidth = 1.0

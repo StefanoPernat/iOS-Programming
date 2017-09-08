@@ -17,6 +17,7 @@
 		209A1B941F55DA07004114EA /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209A1B931F55DA07004114EA /* WorldTrotterTests.swift */; };
 		209A1B9F1F55DA07004114EA /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209A1B9E1F55DA07004114EA /* WorldTrotterUITests.swift */; };
 		209B43331F57186C00D15BE0 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209B43321F57186C00D15BE0 /* ConversionViewController.swift */; };
+		20B2158E1F6304790009D18E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20B215901F6304790009D18E /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,9 @@
 		209B43321F57186C00D15BE0 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		20B2158A1F62FD980009D18E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		20B2158B1F62FE5F0009D18E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		20B2158F1F6304790009D18E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		20B215911F63047C0009D18E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		20B215921F63047D0009D18E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 				209A1B8A1F55DA07004114EA /* Info.plist */,
 				209B43321F57186C00D15BE0 /* ConversionViewController.swift */,
 				205A24B41F5852760078AB9C /* MapViewController.swift */,
+				20B215901F6304790009D18E /* Localizable.strings */,
 				2008222A1F5B1B76009ED338 /* WebViewController.swift */,
 			);
 			path = WorldTrotter;
@@ -237,6 +242,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 209A1B721F55DA07004114EA;
 			productRefGroup = 209A1B7C1F55DA07004114EA /* Products */;
@@ -256,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				209A1B891F55DA07004114EA /* LaunchScreen.storyboard in Resources */,
+				20B2158E1F6304790009D18E /* Localizable.strings in Resources */,
 				209A1B861F55DA07004114EA /* Assets.xcassets in Resources */,
 				209A1B841F55DA07004114EA /* Main.storyboard in Resources */,
 			);
@@ -337,6 +344,16 @@
 				209A1B881F55DA07004114EA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		20B215901F6304790009D18E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20B2158F1F6304790009D18E /* Base */,
+				20B215911F63047C0009D18E /* en */,
+				20B215921F63047D0009D18E /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
