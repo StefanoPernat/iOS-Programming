@@ -65,8 +65,9 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     @IBAction func fahrenheitTextFieldEditingChanged(_ textField: UITextField) {
         //celsiusLabel.text = textField.text
         
-        if let fahrenheitText = textField.text, let value = Double(fahrenheitText) {
-            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        if let fahrenheitText = textField.text,
+            let number = numberFormatter.number(from: fahrenheitText) {
+            fahrenheitValue = Measurement(value: number.doubleValue, unit: .fahrenheit)
         } else {
             fahrenheitValue = nil
         }
