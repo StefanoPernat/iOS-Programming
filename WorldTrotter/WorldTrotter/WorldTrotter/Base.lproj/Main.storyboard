@@ -28,7 +28,7 @@
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-le-UIe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUQ-le-UIe">
                                 <rect key="frame" x="128" y="171" width="119" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -67,6 +67,8 @@
                             <constraint firstItem="fZ6-yo-jcf" firstAttribute="centerX" secondItem="vM6-2g-cuO" secondAttribute="centerX" id="3k6-AG-kIj"/>
                             <constraint firstItem="uUQ-le-UIe" firstAttribute="top" secondItem="vM6-2g-cuO" secondAttribute="bottom" constant="8" id="3qI-Xt-ZVm"/>
                             <constraint firstItem="uUQ-le-UIe" firstAttribute="centerX" secondItem="vM6-2g-cuO" secondAttribute="centerX" id="7Kx-24-S7v"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="uUQ-le-UIe" secondAttribute="trailing" id="9ym-Gu-zwf"/>
+                            <constraint firstItem="uUQ-le-UIe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fv7-fo-lZB"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="vM6-2g-cuO" secondAttribute="trailing" id="HVS-cO-aep"/>
                             <constraint firstItem="biX-sH-s3H" firstAttribute="centerX" secondItem="vM6-2g-cuO" secondAttribute="centerX" id="QyF-Oj-nQ2"/>
                             <constraint firstItem="fZ6-yo-jcf" firstAttribute="top" secondItem="biX-sH-s3H" secondAttribute="bottom" constant="8" id="TEO-cA-x0k"/>
