@@ -90,8 +90,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     // this won't allow to enter a multiple decimal separator in the fahrenheit text field
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        let currentTextHasDecimalSeparator = textField.text?.range(of: ".")
-        let replacementTextHasDecimalSeparator = string.range(of: ".")
+        // based on the iphone locale I will set the decimal separator
+        let currentLocale = Locale.current
+        let decimalSeparator = currentLocale.decimalSeparator ?? "."
+        
+        let currentTextHasDecimalSeparator = textField.text?.range(of: decimalSeparator)
+        let replacementTextHasDecimalSeparator = string.range(of: decimalSeparator)
         
         let lettersCharacterSet = CharacterSet.letters
         if string.rangeOfCharacter(from: lettersCharacterSet) != nil {
