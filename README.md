@@ -52,3 +52,5 @@ I used a UISegmentedControl for the first time, and defined an action programmat
 In this chapter I learned how to localize an app in another languages via localizable.strings and NSLocalizedStrings
 
 > **Bronze Challenge**: Localize WorldTrotter for another language
+
+## Controlling Animations
