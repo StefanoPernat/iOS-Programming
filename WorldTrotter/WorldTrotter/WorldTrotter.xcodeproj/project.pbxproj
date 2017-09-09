@@ -59,6 +59,9 @@
 		20B2158F1F6304790009D18E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		20B215911F63047C0009D18E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		20B215921F63047D0009D18E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		20D47E631F63DA2100EDE399 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		20D47E641F63DA2100EDE399 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		20D47E651F63DA2100EDE399 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,7 @@
 				en,
 				Base,
 				es,
+				it,
 			);
 			mainGroup = 209A1B721F55DA07004114EA;
 			productRefGroup = 209A1B7C1F55DA07004114EA /* Products */;
@@ -334,6 +338,7 @@
 				209A1B831F55DA07004114EA /* Base */,
 				20B2158A1F62FD980009D18E /* en */,
 				20B2158B1F62FE5F0009D18E /* es */,
+				20D47E631F63DA2100EDE399 /* it */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				209A1B881F55DA07004114EA /* Base */,
+				20D47E641F63DA2100EDE399 /* it */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				20B2158F1F6304790009D18E /* Base */,
 				20B215911F63047C0009D18E /* en */,
 				20B215921F63047D0009D18E /* es */,
+				20D47E651F63DA2100EDE399 /* it */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
