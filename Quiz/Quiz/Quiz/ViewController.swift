@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     // Outlets ------------------------------
-    @IBOutlet weak var questionLabel: UILabel!
+    //@IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var currentQuestionLabel: UILabel!
+    @IBOutlet weak var nextQuestionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     
     // The Model 
