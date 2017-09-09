@@ -28,6 +28,12 @@ class ViewController: UIViewController {
     
     var currentQuestionIndex: Int = 0
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        questionLabel.alpha = 0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         questionLabel.text = questions[currentQuestionIndex]
