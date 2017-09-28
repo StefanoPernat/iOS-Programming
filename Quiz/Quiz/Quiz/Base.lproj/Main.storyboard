@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,8 +60,8 @@
                             <constraint firstItem="zIL-3z-fkG" firstAttribute="top" secondItem="bqV-a5-1h0" secondAttribute="bottom" constant="8" id="52I-wl-6cF"/>
                             <constraint firstItem="JyB-bx-3KM" firstAttribute="top" secondItem="S2G-YU-x1D" secondAttribute="bottom" constant="8" id="77p-dn-AQl"/>
                             <constraint firstItem="bqV-a5-1h0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="Fd6-3B-qtq"/>
+                            <constraint firstItem="zIL-3z-fkG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LLB-RG-ici"/>
                             <constraint firstItem="JyB-bx-3KM" firstAttribute="centerX" secondItem="zIL-3z-fkG" secondAttribute="centerX" id="OkP-1t-22H"/>
-                            <constraint firstItem="bqV-a5-1h0" firstAttribute="centerX" secondItem="zIL-3z-fkG" secondAttribute="centerX" id="Vjf-gO-HbD"/>
                             <constraint firstItem="S2G-YU-x1D" firstAttribute="centerX" secondItem="zIL-3z-fkG" secondAttribute="centerX" id="agf-6c-JIr"/>
                             <constraint firstItem="6Zy-et-Zju" firstAttribute="top" secondItem="bqV-a5-1h0" secondAttribute="top" id="dj6-mV-5u5"/>
                             <constraint firstItem="S2G-YU-x1D" firstAttribute="top" secondItem="zIL-3z-fkG" secondAttribute="bottom" constant="167" id="jZz-PJ-xie"/>
