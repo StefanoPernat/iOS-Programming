@@ -429,6 +429,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7P2H33KSX;
 				INFOPLIST_FILE = Buggy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thebignerdranch.learning.Buggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,6 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7P2H33KSX;
 				INFOPLIST_FILE = Buggy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thebignerdranch.learning.Buggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
