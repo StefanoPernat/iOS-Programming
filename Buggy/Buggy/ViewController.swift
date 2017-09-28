@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
 
     // IBActions
-    @IBAction func buttonTapped(_ sender: UIButton) {
+    @IBAction func switchToggled(_ sender: UISwitch) {
         print("Called buttonTapped(_:)")
     }
 }
