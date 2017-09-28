@@ -59,3 +59,4 @@ In this chapter I learned a bit of animation and how to animate views using the 
 
 ## Debugging
 
+In this chapter I practiced using the debugger and some LLDB commands
