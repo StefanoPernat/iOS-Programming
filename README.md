@@ -56,3 +56,6 @@ In this chapter I learned how to localize an app in another languages via locali
 ## Controlling Animations
 
 In this chapter I learned a bit of animation and how to animate views using the UIView.animate method
+
+## Debugging
+
