@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     // IBActions
     @IBAction func buttonTapped(_ sender: UISwitch) {
         print("Called buttonTapped(_:)")
+        print("sender: \(sender)")
+        print("Is control on? \(sender.isOn)")
     }
 }
 
