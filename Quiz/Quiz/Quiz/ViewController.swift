@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextQuestionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     
+    // Outlets for constraint --------------------
+    @IBOutlet weak var currentQuestionLabelCenterXConstraint: NSLayoutConstraint!
+    @IBOutlet weak var nextQuestionLabelCenterXConstraint: NSLayoutConstraint!
+    
+    
     // The Model 
     let questions = [
         "What is 7+7?",
