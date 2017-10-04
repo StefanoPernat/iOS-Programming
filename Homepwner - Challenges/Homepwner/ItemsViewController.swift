@@ -17,6 +17,9 @@ class ItemsViewController: UITableViewController {
         // get the status bar height
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         
+        let imageView = UIImageView(image: UIImage(named: "4"))
+        tableView.backgroundView = imageView
+        
         // insert a padding between table view contents and status bar
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
@@ -27,7 +30,7 @@ class ItemsViewController: UITableViewController {
         return 3
     }
     
-    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return "Items with a value above 50$"
         } else if section == 1 {
@@ -49,6 +52,15 @@ class ItemsViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section  < 2 {
+            return CGFloat(60.0)
+        }
+        
+        return CGFloat(44.0)
+    }
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create an instance of UITableViewCell with default appearence
         // update to reuse identifier
@@ -64,11 +76,15 @@ class ItemsViewController: UITableViewController {
             // set the cell's textLabel and detailText label to the corresponding item's name and value
             cell.textLabel?.text = item.name
             cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+            cell.textLabel?.font.withSize(20)
+            cell.detailTextLabel?.font.withSize(20)
         } else if indexPath.section == 1 {
             item = allOtherItems[indexPath.row]
             // set the cell's textLabel and detailText label to the corresponding item's name and value
             cell.textLabel?.text = item.name
             cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+            cell.textLabel?.font.withSize(20)
+            cell.detailTextLabel?.font.withSize(20)
         } else {
             cell.textLabel?.text = "No other items"
             cell.detailTextLabel?.text = ""
