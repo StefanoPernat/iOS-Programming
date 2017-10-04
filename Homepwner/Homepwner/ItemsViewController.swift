@@ -15,6 +15,18 @@ class ItemsViewController: UITableViewController {
         return itemStore.allItems.count
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // get the status bar height
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        
+        // insert a padding between table view contents and status bar
+        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = insets
+        tableView.scrollIndicatorInsets = insets
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create an instance of UITableViewCell with default appearence
         // update to reuse identifier
