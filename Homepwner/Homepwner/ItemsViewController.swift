@@ -10,4 +10,22 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemStore.allItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // create an instance of UITableViewCell with default appearence
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        
+        // retrive the item that correspond at the nth row of the tableview
+        let item = itemStore.allItems[indexPath.row]
+        
+        // set the cell's textLabel and detailText label to the corresponding item's name and value
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        
+        return cell
+    }
 }
