@@ -17,7 +17,8 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create an instance of UITableViewCell with default appearence
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        // update to reuse identifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         
         // retrive the item that correspond at the nth row of the tableview
         let item = itemStore.allItems[indexPath.row]
