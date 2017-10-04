@@ -24,15 +24,17 @@ class ItemsViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         if section == 0 {
             return "Items with a value above 50$"
-        } else {
+        } else if section == 1 {
             return "All other items"
         }
+        
+        return nil
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,8 +42,10 @@ class ItemsViewController: UITableViewController {
         print(section)
         if section == 0 {
             return numberOfItemsAbove50
-        } else {
+        } else if section == 1 {
             return itemStore.allItems.count - numberOfItemsAbove50
+        } else {
+            return 1
         }
     }
     
@@ -57,13 +61,18 @@ class ItemsViewController: UITableViewController {
         var item: Item
         if indexPath.section == 0 {
             item = itemsWithPriceAbove50[indexPath.row]
-        } else {
+            // set the cell's textLabel and detailText label to the corresponding item's name and value
+            cell.textLabel?.text = item.name
+            cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        } else if indexPath.section == 1 {
             item = allOtherItems[indexPath.row]
+            // set the cell's textLabel and detailText label to the corresponding item's name and value
+            cell.textLabel?.text = item.name
+            cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        } else {
+            cell.textLabel?.text = "No other items"
+            cell.detailTextLabel?.text = ""
         }
-        
-        // set the cell's textLabel and detailText label to the corresponding item's name and value
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         
         return cell
     }
