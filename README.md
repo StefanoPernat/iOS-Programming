@@ -62,3 +62,6 @@ In this chapter I learned a bit of animation and how to animate views using the 
 In this chapter I practiced using the debugger and some LLDB commands
 
 ## UITableView and UITableViewController
+
+In this chapter I learned to use UITableView and UITableView controller, I learned also to save memory reusing cells instead of creating new cell every time,
+the challenges helped me to practice with the UITableViewDataSource protocol and its methods
