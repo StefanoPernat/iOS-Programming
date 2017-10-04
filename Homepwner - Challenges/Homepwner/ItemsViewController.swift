@@ -23,17 +23,43 @@ class ItemsViewController: UITableViewController {
         tableView.scrollIndicatorInsets = insets
     }
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if section == 0 {
+            return "Items with a value above 50$"
+        } else {
+            return "All other items"
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemStore.allItems.count
+        let numberOfItemsAbove50 = itemStore.getNumberOfItemsWithValue(above: 50)
+        print(section)
+        if section == 0 {
+            return numberOfItemsAbove50
+        } else {
+            return itemStore.allItems.count - numberOfItemsAbove50
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create an instance of UITableViewCell with default appearence
         // update to reuse identifier
+        let itemsWithPriceAbove50 = itemStore.splitsItemsAboveValue(50).0
+        let allOtherItems = itemStore.splitsItemsAboveValue(50).1
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         
         // retrive the item that correspond at the nth row of the tableview
-        let item = itemStore.allItems[indexPath.row]
+        var item: Item
+        if indexPath.section == 0 {
+            item = itemsWithPriceAbove50[indexPath.row]
+        } else {
+            item = allOtherItems[indexPath.row]
+        }
         
         // set the cell's textLabel and detailText label to the corresponding item's name and value
         cell.textLabel?.text = item.name
