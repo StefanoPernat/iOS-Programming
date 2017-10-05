@@ -44,7 +44,14 @@ class ItemsViewController: UITableViewController {
     
     // IBActions
     @IBAction func addNewItem(_ sender: UIButton) {
+        // first create a new item
+        let newItem = itemStore.createItem()
         
+        // make a new IndexPath for the 0th section, last row
+        if let index = itemStore.allItems.index(of: newItem){
+            let indexPath = IndexPath(row: index, section: 0)
+            tableView.insertRows(at: [indexPath], with: .automatic)
+        }
     }
     
     @IBAction func toggleEditingMode(_ sender: UIButton) {
