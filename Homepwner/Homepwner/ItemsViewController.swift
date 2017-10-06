@@ -42,6 +42,20 @@ class ItemsViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // if tableView is asking to commit a delete command...
+        if editingStyle == .delete {
+            let item = itemStore.allItems[indexPath.row]
+            // remove item from the store
+            itemStore.removeItem(item)
+            // remove the row from the table view
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        
+        
+    }
+    
     // IBActions
     @IBAction func addNewItem(_ sender: UIButton) {
         // first create a new item
