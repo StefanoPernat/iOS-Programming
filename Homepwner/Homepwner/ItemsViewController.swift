@@ -42,6 +42,38 @@ class ItemsViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // if tableView is asking to commit a delete command...
+        if editingStyle == .delete {
+            let item = itemStore.allItems[indexPath.row]
+            
+            // prompt to the user an alert and ask him for confirmation while deleting
+            let title = "Delete \(item.name)?"
+            let message = "Are you sure you want to delete this item?"
+            
+            let deleteAlertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {[unowned self] (action) -> Void in
+                // moved statements to remove item inside delete action closure
+                self.itemStore.removeItem(item)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            })
+            
+            //adding action to UIAlertController
+            deleteAlertController.addAction(cancelAction)
+            deleteAlertController.addAction(deleteAction)
+            
+            // present to the user the UIAlertController
+            present(deleteAlertController, animated: true, completion: nil)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
+    }
+    
     // IBActions
     @IBAction func addNewItem(_ sender: UIButton) {
         // first create a new item
