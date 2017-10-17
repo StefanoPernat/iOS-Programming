@@ -55,7 +55,7 @@ class ItemsViewController: UITableViewController {
             let deleteAlertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
             
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {[unowned self] (action) -> Void in
+            let deleteAction = UIAlertAction(title: "Remove", style: .destructive, handler: {[unowned self] (action) -> Void in
                 // moved statements to remove item inside delete action closure
                 self.itemStore.removeItem(item)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)

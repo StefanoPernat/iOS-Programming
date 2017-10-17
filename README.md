@@ -69,3 +69,7 @@ the challenges helped me to practice with the UITableViewDataSource protocol and
 ## Editing UITableView
 
 In this chapter I learned to use the tableview delegates methods to delete and move rows, I also used a UIAlertController to inform the user of the deletion
+
+> **Bronze Challenge**: Rename the delete confirmation button to remove
+
+> 
