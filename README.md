@@ -75,3 +75,7 @@ In this chapter I learned to use the tableview delegates methods to delete and m
 > **Silver Challenge**: Make it so the tableview always shows a final row that says "No more items", and make it so that the final row cannot be moved
 
 > **Gold Challenge**: Make it so that no matter what the no more items row can never be knocked out of the last position and make it undeletable
+
+## Subclassing UITableViewCell
+
+
