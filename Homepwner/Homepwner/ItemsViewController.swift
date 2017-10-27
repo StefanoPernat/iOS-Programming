@@ -48,6 +48,7 @@ class ItemsViewController: UITableViewController {
             cell.nameLabel.text = item.name
             cell.serialNumberLabel.text = item.serialNumber
             cell.valueLabel.text = "$\(item.valueInDollars)"
+            cell.updateCellColors()
         } else {
             cell.nameLabel.font = cell.nameLabel.font.withSize(12)
             cell.nameLabel.text = "No more items..."
