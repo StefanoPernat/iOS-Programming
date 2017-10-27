@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vS9-9J-x7Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vS9-9J-x7Q">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -102,19 +101,33 @@
             <point key="canvasLocation" x="-1916" y="-706"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="bFx-Tc-3pz">
+        <scene sceneID="ZVC-rj-NRE">
             <objects>
-                <viewController id="2vM-Da-vef" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="feb-Mc-2ni">
+                <viewController id="v8v-ju-ivL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="omj-vG-P63"/>
+                        <viewControllerLayoutGuide type="bottom" id="hFj-Fm-q7E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cvZ-mA-gDe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JgJ-Gb-7Eb">
+                                <rect key="frame" x="16" y="28" width="343" height="631"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="2KX-4C-YkT"/>
+                        <constraints>
+                            <constraint firstItem="JgJ-Gb-7Eb" firstAttribute="top" secondItem="omj-vG-P63" secondAttribute="bottom" constant="8" id="LDl-gc-LZe"/>
+                            <constraint firstItem="JgJ-Gb-7Eb" firstAttribute="leading" secondItem="cvZ-mA-gDe" secondAttribute="leadingMargin" id="Qz0-8t-vv5"/>
+                            <constraint firstItem="hFj-Fm-q7E" firstAttribute="top" secondItem="JgJ-Gb-7Eb" secondAttribute="bottom" constant="8" id="b6u-U8-cMB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JgJ-Gb-7Eb" secondAttribute="trailing" id="dZh-D1-UyP"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xMv-1R-KqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6w-H2-HbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="-707"/>
+            <point key="canvasLocation" x="-174" y="-707"/>
         </scene>
     </scenes>
 </document>
