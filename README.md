@@ -78,4 +78,4 @@ In this chapter I learned to use the tableview delegates methods to delete and m
 
 ## Subclassing UITableViewCell
 
-
+In this chapter I learned how to use custom UITableViewCells and made custom classes for that, I also learned a bit of dinamic types"
