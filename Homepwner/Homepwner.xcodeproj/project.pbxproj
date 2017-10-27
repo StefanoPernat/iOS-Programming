@@ -18,6 +18,7 @@
 		20C57FD31F8151BE00EFE18E /* HomepwnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57FD21F8151BE00EFE18E /* HomepwnerUITests.swift */; };
 		20C57FE31F8153F800EFE18E /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57FE21F8153F800EFE18E /* ItemsViewController.swift */; };
 		20C57FE61F81562D00EFE18E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C57FE51F81562D00EFE18E /* Item.swift */; };
+		20F38A9E1FA39E96008B296C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F38A9D1FA39E96008B296C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		20C57FD41F8151BE00EFE18E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C57FE21F8153F800EFE18E /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		20C57FE51F81562D00EFE18E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		20F38A9D1FA39E96008B296C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				20C57FBE1F8151BE00EFE18E /* Info.plist */,
 				20C57FE21F8153F800EFE18E /* ItemsViewController.swift */,
 				20AA1F871F9CA0B900190A73 /* ItemCell.swift */,
+				20F38A9D1FA39E96008B296C /* DetailViewController.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				20C57FE61F81562D00EFE18E /* Item.swift in Sources */,
 				20C57FB51F8151BE00EFE18E /* ViewController.swift in Sources */,
+				20F38A9E1FA39E96008B296C /* DetailViewController.swift in Sources */,
 				20AA1F881F9CA0B900190A73 /* ItemCell.swift in Sources */,
 				20C57FE31F8153F800EFE18E /* ItemsViewController.swift in Sources */,
 				201ACD981F852E8B00572DBD /* ItemStore.swift in Sources */,
