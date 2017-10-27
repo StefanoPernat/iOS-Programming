@@ -15,6 +15,23 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var valueField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     
+    let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        
+        return formatter
+    }()
+    
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        return formatter
+    }()
+    
     var item: Item!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,7 +39,7 @@ class DetailViewController: UIViewController {
         
         nameField.text = item.name
         serialNumberField.text = item.serialNumber
-        valueField.text = "\(item.valueInDollars)"
-        dateLabel.text = "\(item.dateCreated)"
+        valueField.text = numberFormatter.string(from: NSNumber(value: item.valueInDollars))
+        dateLabel.text = dateFormatter.string(from: item.dateCreated)
     }
 }
