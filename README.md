@@ -84,4 +84,4 @@ In this chapter I learned how to use custom UITableViewCells and made custom cla
 
 ## Using UIStackViews
 
-
+In this chapter I learned how to use stackviews to made much more consistent views, with less constraint, I learned also to lauch a new ViewController using the segue mechanism
