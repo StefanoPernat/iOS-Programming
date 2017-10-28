@@ -114,6 +114,32 @@ class ItemsViewController: UITableViewController {
         itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
     
+    // if no more items is tapped dont perform the segue
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if let section = tableView.indexPathForSelectedRow?.section, section == 1 {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    // when the segue for DetailViewController is triggered
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showItem"?:
+            if let section = tableView.indexPathForSelectedRow?.section, section == 0 {
+                if let row = tableView.indexPathForSelectedRow?.row {
+                    // get the item  associated with the first section and the right row
+                    let item = itemStore.allItems[row]
+                    let detailViewController = segue.destination as! DetailViewController
+                    detailViewController.item = item
+                }
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
+    
     // IBActions
     @IBAction func addNewItem(_ sender: UIButton) {
         // first create a new item

@@ -32,6 +32,7 @@ class DetailViewController: UIViewController {
         return formatter
     }()
     
+    // the selected item
     var item: Item!
     
     override func viewWillAppear(_ animated: Bool) {
