@@ -147,7 +147,7 @@ class ItemsViewController: UITableViewController {
     }
     
     // IBActions
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         // first create a new item
         let newItem = itemStore.createItem()
         
