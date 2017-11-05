@@ -20,14 +20,6 @@ class ItemsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // get the status bar height
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        
-        // insert a padding between table view contents and status bar
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
-        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
     }
@@ -161,16 +153,6 @@ class ItemsViewController: UITableViewController {
         if let index = itemStore.allItems.index(of: newItem){
             let indexPath = IndexPath(row: index, section: 0)
             tableView.insertRows(at: [indexPath], with: .automatic)
-        }
-    }
-    
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        if isEditing { // in editing mode, change title and turn off editing
-            sender.setTitle("Edit", for: .normal)
-            setEditing(false, animated: true)
-        } else {    // not in editing mode change title and turn on editing
-            sender.setTitle("Done", for: .normal)
-            setEditing(true, animated: true)
         }
     }
 }
