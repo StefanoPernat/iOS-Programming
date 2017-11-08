@@ -87,3 +87,7 @@ In this chapter I learned how to use custom UITableViewCells and made custom cla
 In this chapter I learned how to use stackviews to made much more consistent views, with less constraint, I learned also to lauch a new ViewController using the segue mechanism
 
 ## UINavigation Controller
+
+In this chapter I learned about using the NavigationViewController, UIBarButtonItem and also a litte bit of UITapGestureRecognizer
+
+> Change from QWERTY keyboard to Number Pad of DetailViewController
