@@ -91,3 +91,5 @@ In this chapter I learned how to use stackviews to made much more consistent vie
 In this chapter I learned about using the NavigationViewController, UIBarButtonItem and also a litte bit of UITapGestureRecognizer
 
 > Change from QWERTY keyboard to Number Pad of DetailViewController
+
+> Subclass UITextField class and override resign and become first responder so that its border will change

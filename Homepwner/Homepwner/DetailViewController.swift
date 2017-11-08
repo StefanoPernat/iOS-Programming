@@ -10,10 +10,10 @@ import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate {
     //IBoutlets
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var serialNumberField: UITextField!
-    @IBOutlet weak var valueField: UITextField!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var nameField: RTextField!
+    @IBOutlet weak var serialNumberField: RTextField!
+    @IBOutlet weak var valueField: RTextField!
+    @IBOutlet weak var dateLabel: RTextField!
     
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
