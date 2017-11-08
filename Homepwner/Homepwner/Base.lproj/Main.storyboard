@@ -156,11 +156,15 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpu-1M-lqw">
-                                        <rect key="frame" x="0.0" y="114" width="343" height="473"/>
+                                        <rect key="frame" x="0.0" y="114" width="343" height="435"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UF-h0-kyI">
+                                        <rect key="frame" x="0.0" y="557" width="343" height="30"/>
+                                        <state key="normal" title="Change Date"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="8dE-fg-cIO" firstAttribute="leading" secondItem="i5n-Sm-XaD" secondAttribute="leading" id="WEC-QA-5lP"/>
