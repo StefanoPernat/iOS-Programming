@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     //IBoutlets
     @IBOutlet weak var nameField: RTextField!
     @IBOutlet weak var serialNumberField: RTextField!
@@ -94,6 +94,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         } else {
             imagePicker.sourceType = .photoLibrary
         }
+        
+        imagePicker.delegate = self
     }
     
 }
