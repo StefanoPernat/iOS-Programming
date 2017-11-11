@@ -165,7 +165,7 @@
                                         <rect key="frame" x="0.0" y="557" width="343" height="30"/>
                                         <state key="normal" title="Change Date"/>
                                         <connections>
-                                            <segue destination="Klh-dI-0fb" kind="show" id="NMY-WE-bDy"/>
+                                            <segue destination="Klh-dI-0fb" kind="show" identifier="changeDate" id="NMY-WE-bDy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -206,7 +206,7 @@
         <!--Change Date-->
         <scene sceneID="xoN-dK-7SB">
             <objects>
-                <viewController title="Change Date" id="Klh-dI-0fb" sceneMemberID="viewController">
+                <viewController title="Change Date" id="Klh-dI-0fb" customClass="ChangeDateViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lnh-XA-1Hg"/>
                         <viewControllerLayoutGuide type="bottom" id="DOX-Jl-0hQ"/>
@@ -215,7 +215,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="46t-4X-srv">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="46t-4X-srv">
                                 <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="532080996.98587197">
                                     <!--2017-11-11 08:16:36 +0000-->
@@ -229,6 +229,9 @@
                             <constraint firstItem="46t-4X-srv" firstAttribute="centerY" secondItem="eOr-No-l6X" secondAttribute="centerY" id="b6U-QN-gK0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="46t-4X-srv" id="91q-6t-vBi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAP-8s-yDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
