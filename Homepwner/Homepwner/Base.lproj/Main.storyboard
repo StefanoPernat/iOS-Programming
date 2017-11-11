@@ -176,7 +176,11 @@
                                     <constraint firstAttribute="height" constant="44" id="Qn4-Mu-jT6"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="camera" id="hA6-Fr-QNb"/>
+                                    <barButtonItem systemItem="camera" id="hA6-Fr-QNb">
+                                        <connections>
+                                            <action selector="takePicture:" destination="v8v-ju-ivL" id="FZj-xH-3SN"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="Z8a-jJ-Tst"/>
                                     <barButtonItem title="Change Date" id="GAX-Rv-y1Q">
                                         <connections>
