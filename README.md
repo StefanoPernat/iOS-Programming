@@ -93,3 +93,5 @@ In this chapter I learned about using the NavigationViewController, UIBarButtonI
 > Change from QWERTY keyboard to Number Pad of DetailViewController
 
 > Subclass UITextField class and override resign and become first responder so that its border will change
+
+> Added button for changing date and pushed a ChangeDateViewController to do so
