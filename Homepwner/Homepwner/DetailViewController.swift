@@ -14,6 +14,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var serialNumberField: RTextField!
     @IBOutlet weak var valueField: RTextField!
     @IBOutlet weak var dateLabel: RTextField!
+    @IBOutlet weak var imageView: UIImageView!
     
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
