@@ -164,6 +164,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UF-h0-kyI">
                                         <rect key="frame" x="0.0" y="557" width="343" height="30"/>
                                         <state key="normal" title="Change Date"/>
+                                        <connections>
+                                            <segue destination="Klh-dI-0fb" kind="show" id="NMY-WE-bDy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -198,7 +201,38 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="164" y="-707.49625187406298"/>
+            <point key="canvasLocation" x="-354" y="-707"/>
+        </scene>
+        <!--Change Date-->
+        <scene sceneID="xoN-dK-7SB">
+            <objects>
+                <viewController title="Change Date" id="Klh-dI-0fb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lnh-XA-1Hg"/>
+                        <viewControllerLayoutGuide type="bottom" id="DOX-Jl-0hQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eOr-No-l6X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="46t-4X-srv">
+                                <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="532080996.98587197">
+                                    <!--2017-11-11 08:16:36 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="46t-4X-srv" secondAttribute="trailing" id="Avn-xL-gY9"/>
+                            <constraint firstItem="46t-4X-srv" firstAttribute="leading" secondItem="eOr-No-l6X" secondAttribute="leading" id="VaD-cy-rpV"/>
+                            <constraint firstItem="46t-4X-srv" firstAttribute="centerY" secondItem="eOr-No-l6X" secondAttribute="centerY" id="b6U-QN-gK0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAP-8s-yDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="-707"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w4V-we-247">
