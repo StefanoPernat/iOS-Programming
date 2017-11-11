@@ -96,6 +96,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         }
         
         imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
     
 }
