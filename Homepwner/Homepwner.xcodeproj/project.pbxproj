@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		201ACD981F852E8B00572DBD /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201ACD971F852E8B00572DBD /* ItemStore.swift */; };
+		201C35BF1FB8C0CB009C7908 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201C35BE1FB8C0CB009C7908 /* ImageStore.swift */; };
 		203131951FB6E8A3007F969E /* ChangeDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203131941FB6E8A3007F969E /* ChangeDateViewController.swift */; };
 		204B6CA51FB38E60008D0E93 /* RTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204B6CA41FB38E60008D0E93 /* RTextField.swift */; };
 		20AA1F881F9CA0B900190A73 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AA1F871F9CA0B900190A73 /* ItemCell.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		201ACD971F852E8B00572DBD /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		201C35BE1FB8C0CB009C7908 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		203131941FB6E8A3007F969E /* ChangeDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDateViewController.swift; sourceTree = "<group>"; };
 		204B6CA41FB38E60008D0E93 /* RTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTextField.swift; sourceTree = "<group>"; };
 		20AA1F871F9CA0B900190A73 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				20C57FE21F8153F800EFE18E /* ItemsViewController.swift */,
 				20AA1F871F9CA0B900190A73 /* ItemCell.swift */,
 				20F38A9D1FA39E96008B296C /* DetailViewController.swift */,
+				201C35BE1FB8C0CB009C7908 /* ImageStore.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				203131951FB6E8A3007F969E /* ChangeDateViewController.swift in Sources */,
 				20C57FE61F81562D00EFE18E /* Item.swift in Sources */,
 				20C57FB51F8151BE00EFE18E /* ViewController.swift in Sources */,
+				201C35BF1FB8C0CB009C7908 /* ImageStore.swift in Sources */,
 				20F38A9E1FA39E96008B296C /* DetailViewController.swift in Sources */,
 				20AA1F881F9CA0B900190A73 /* ItemCell.swift in Sources */,
 				20C57FE31F8153F800EFE18E /* ItemsViewController.swift in Sources */,
