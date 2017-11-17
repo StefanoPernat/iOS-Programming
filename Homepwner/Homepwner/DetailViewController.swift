@@ -124,4 +124,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         present(imagePicker, animated: true, completion: nil)
     }
     
+    // Silver challenge
+    @IBAction func removeImage(_ sender: UIBarButtonItem) {
+        // delete image from ImageStore and set imageview's image to nil
+        imageStore.delete(forKey: item.itemKey)
+        imageView.image = nil
+    }
 }

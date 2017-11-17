@@ -181,7 +181,13 @@
                                             <action selector="takePicture:" destination="v8v-ju-ivL" id="FZj-xH-3SN"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="flexibleSpace" id="Z8a-jJ-Tst"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HFM-J4-7Kf"/>
+                                    <barButtonItem systemItem="trash" id="1mf-CQ-ZFN">
+                                        <connections>
+                                            <action selector="removeImage:" destination="v8v-ju-ivL" id="QsI-0s-jnA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="l6H-tR-N1r"/>
                                     <barButtonItem title="Change Date" id="GAX-Rv-y1Q">
                                         <connections>
                                             <segue destination="Klh-dI-0fb" kind="show" identifier="changeDate" id="CIk-k2-quy"/>
