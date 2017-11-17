@@ -49,6 +49,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         serialNumberField.text = item.serialNumber
         valueField.text = numberFormatter.string(from: NSNumber(value: item.valueInDollars))
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
+        
+        // retrive the image from imageStore
+        let associatedImage = imageStore.image(forKey: item.itemKey)
+        
+        // set imageview image
+        imageView.image = associatedImage
     }
     
     // save changes to item when pressed the back button
@@ -103,6 +109,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
         let imagePicker = UIImagePickerController()
+        
+        // Bronze challenge
+        imagePicker.allowsEditing = true
         
         // if device has a camera take a picture, otherwise select from the photo library
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
