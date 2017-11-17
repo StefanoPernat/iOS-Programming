@@ -40,6 +40,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         }
     }
     
+    var imageStore: ImageStore!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
