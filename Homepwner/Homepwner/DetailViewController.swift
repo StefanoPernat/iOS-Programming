@@ -87,6 +87,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
+        // Store the image into the imageStore
+        imageStore.setImage(image, forKey: item.itemKey)
+        
         // put the image inside imageview
         imageView.image = image
         
