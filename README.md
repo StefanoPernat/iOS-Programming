@@ -97,3 +97,11 @@ In this chapter I learned about using the NavigationViewController, UIBarButtonI
 > Added button for changing date and pushed a ChangeDateViewController to do so
 
 ## Camera
+
+In this chapter I learned how to use iPhone camera, and UIImagePicker. I implemented some of the UIImagePickerDelegate callback methods.
+
+> **Bronze Challenge**: enable editing on UIImagePicker
+
+> **Silver Challenge**: added a button for clearing an image
+
+> **Gold Challenge**: set the Camera overlay view
