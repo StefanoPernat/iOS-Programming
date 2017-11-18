@@ -133,6 +133,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
             overlayView.isUserInteractionEnabled = false
             
             imagePicker.cameraOverlayView = overlayView
+           
         } else {
             imagePicker.sourceType = .photoLibrary
         }
