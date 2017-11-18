@@ -8,13 +8,14 @@
 
 import UIKit
 
-class Item: NSObject {
+class Item: NSObject, NSCoding {
     var name: String
     var valueInDollars: Int
     var serialNumber: String?
     var dateCreated: Date
     let itemKey: String
 
+    // MARK: - Initialization
     init(name: String, serialNumber: String?, valueInDollars: Int) {
         self.name = name
         self.valueInDollars = valueInDollars
@@ -44,5 +45,25 @@ class Item: NSObject {
         } else {
             self.init(name: "", serialNumber: nil, valueInDollars: 0)
         }
+    }
+    
+    // it seems a lot like Java serialization
+    required init(coder aDecoder: NSCoder) {
+        name = aDecoder.decodeObject(forKey: "name") as! String
+        valueInDollars = aDecoder.decodeInteger(forKey: "valueInDollars")
+        serialNumber = aDecoder.decodeObject(forKey: "serialNumber") as! String?
+        dateCreated = aDecoder.decodeObject(forKey: "dateCreated") as! Date
+        itemKey = aDecoder.decodeObject(forKey: "itemKey") as! String
+        
+        super.init()
+    }
+    
+    // MARK: - NSCoding protocol's methods
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(valueInDollars, forKey: "valueInDollars")
+        aCoder.encode(serialNumber, forKey: "serialNumber")
+        aCoder.encode(dateCreated, forKey: "dateCreated")
+        aCoder.encode(itemKey, forKey: "itemKey")
     }
 }

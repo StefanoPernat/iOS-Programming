@@ -105,3 +105,7 @@ In this chapter I learned how to use iPhone camera, and UIImagePicker. I impleme
 > **Silver Challenge**: added a button for clearing an image
 
 > **Gold Challenge**: set the Camera overlay view
+
+## Saving, Loading, and Application States
+
+In this chapter I learned about NSCoding protocol and how to implement its methods for archiving purposes, (like java serialization)
