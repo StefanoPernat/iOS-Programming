@@ -109,3 +109,4 @@ In this chapter I learned how to use iPhone camera, and UIImagePicker. I impleme
 ## Saving, Loading, and Application States
 
 In this chapter I learned about NSCoding protocol and how to implement its methods for archiving purposes, (like java serialization)
+I lerned also a little bit of Application sandbox, I constructed successfully an url that points to the Documents directory of the application sandbox for saving items on the filesystem
