@@ -17,6 +17,13 @@ class ItemStore {
         return documentDirectory.appendingPathComponent("items.archive")
     }()
     
+    // MARK: - ItemStore initialization
+    init() {
+        if let archivedItems = NSKeyedUnarchiver.unarchiveObject(withFile: itemArchivedURL.path) as? [Item] {
+            allItems = archivedItems
+        }
+    }
+    
     // MARK: - ItemStore main methods
     // adding new items to the store
     @discardableResult func createItem() -> Item {
