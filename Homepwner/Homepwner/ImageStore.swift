@@ -24,6 +24,15 @@ class ImageStore {
     // MARK: - methods to manipulate the cache (insert, delete and retrive)
     func setImage(_ image: UIImage, forKey key: String) {
         cache.setObject(image, forKey: key as NSString)
+        
+        // Create a url for the image
+        let url = imageURL(forKey: key)
+        
+        // Turn image into JPEG data
+        if let data = UIImageJPEGRepresentation(image, 0.5) {
+            // write it to the URL
+            try? data.write(to: url, options: [.atomic])
+        }
     }
     
     func image(forKey key: String) -> UIImage? {
