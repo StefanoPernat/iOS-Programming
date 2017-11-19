@@ -36,7 +36,17 @@ class ImageStore {
     }
     
     func image(forKey key: String) -> UIImage? {
-        return cache.object(forKey: key as NSString)
+        if let existingImage = cache.object(forKey: key as NSString) {
+            return existingImage
+        }
+        
+        let url = imageURL(forKey: key)
+        guard let imageFromDisk = UIImage(contentsOfFile: url.path) else {
+            return nil
+        }
+        
+        cache.setObject(imageFromDisk, forKey: key as NSString)
+        return imageFromDisk
     }
     
     func delete(forKey key: String) {
