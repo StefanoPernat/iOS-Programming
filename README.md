@@ -116,3 +116,5 @@ I learned also about application state transitions.
 > **Bronze Challenge**: Instead of saving each item image as JPEG, save it as PNG
 
 ## Size Classes
+
+Added variation for a better landscape UI, solved also bronze challenge
