@@ -114,3 +114,5 @@ I learned also a little bit of Application sandbox, I constructed successfully a
 I learned also about application state transitions.
 
 > **Bronze Challenge**: Instead of saving each item image as JPEG, save it as PNG
+
+## Size Classes
