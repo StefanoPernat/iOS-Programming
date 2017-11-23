@@ -49,4 +49,25 @@ class DrawView: UIView {
         // force re-drawing
         setNeedsDisplay()
     }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        let location = touch.location(in: self)
+        
+        currentLine?.end = location
+        setNeedsDisplay()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if var line = currentLine {
+            let touch = touches.first!
+            let location = touch.location(in: self)
+            line.end = location
+            
+            finishedLines.append(line)
+        }
+        
+        currentLine = nil
+        setNeedsDisplay()
+    }
 }
