@@ -12,7 +12,7 @@ class DrawView: UIView {
     var currentLine: Line?
     var finishedLines = [Line]()
     
-    
+    // MARK: - Basic drawing methods
     func stroke(_ line: Line) {
         let path = UIBezierPath()
         path.lineWidth = 10
@@ -35,5 +35,18 @@ class DrawView: UIView {
             UIColor.red.setStroke()
             stroke(line)
         }
+    }
+    
+    // MARK: touches callbacks
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        
+        // get the location of the touch
+        let location = touch.location(in: self)
+        
+        currentLine = Line(begin: location, end: location)
+        
+        // force re-drawing
+        setNeedsDisplay()
     }
 }
