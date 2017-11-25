@@ -120,3 +120,5 @@ I learned also about application state transitions.
 Added variation for a better landscape UI, solved also bronze challenge
 
 ## Touch Event and UIResponder
+
+In this chapter I learned about UIResponder callback methods to handle touches on a UIView 
