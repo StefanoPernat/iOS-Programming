@@ -26,6 +26,18 @@ struct FlickrAPI {
         var components = URLComponents(string: baseURLString)!
         var queryItems = [URLQueryItem]()
         
+        let commonQueryItems = [
+            "method": method.rawValue,
+            "format": "json",
+            "nojsoncallback": "1",
+            "api_key": apiKey
+        ]
+        
+        for (key, value) in commonQueryItems {
+            let item = URLQueryItem(name: key, value: value)
+            queryItems.append(item)
+        }
+        
         if let additionalParameters = parameters {
             for (key, value) in additionalParameters {
                 let item = URLQueryItem(name: key, value: value)
