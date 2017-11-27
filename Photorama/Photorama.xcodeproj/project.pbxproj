@@ -14,6 +14,7 @@
 		2095F0061FCADCF70084EA09 /* PhotoramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F0051FCADCF70084EA09 /* PhotoramaTests.swift */; };
 		2095F0111FCADCF70084EA09 /* PhotoramaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F0101FCADCF70084EA09 /* PhotoramaUITests.swift */; };
 		2095F01F1FCB31CF0084EA09 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F01E1FCB31CF0084EA09 /* PhotosViewController.swift */; };
+		2095F0221FCB39900084EA09 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095F0211FCB39900084EA09 /* FlickrAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2095F0101FCADCF70084EA09 /* PhotoramaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoramaUITests.swift; sourceTree = "<group>"; };
 		2095F0121FCADCF70084EA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2095F01E1FCB31CF0084EA09 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		2095F0211FCB39900084EA09 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		2095EFEF1FCADCF70084EA09 /* Photorama */ = {
 			isa = PBXGroup;
 			children = (
+				2095F0201FCB39570084EA09 /* Model */,
 				2095EFF01FCADCF70084EA09 /* AppDelegate.swift */,
 				2095EFF41FCADCF70084EA09 /* Main.storyboard */,
 				2095EFF71FCADCF70084EA09 /* Assets.xcassets */,
@@ -123,6 +126,14 @@
 				2095F0121FCADCF70084EA09 /* Info.plist */,
 			);
 			path = PhotoramaUITests;
+			sourceTree = "<group>";
+		};
+		2095F0201FCB39570084EA09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2095F0211FCB39900084EA09 /* FlickrAPI.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2095F0221FCB39900084EA09 /* FlickrAPI.swift in Sources */,
 				2095EFF11FCADCF70084EA09 /* AppDelegate.swift in Sources */,
 				2095F01F1FCB31CF0084EA09 /* PhotosViewController.swift in Sources */,
 			);
