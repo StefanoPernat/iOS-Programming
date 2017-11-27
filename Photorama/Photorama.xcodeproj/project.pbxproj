@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		205558011FCCA41A00D32AEB /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205558001FCCA41A00D32AEB /* PhotoStore.swift */; };
 		2095EFF11FCADCF70084EA09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095EFF01FCADCF70084EA09 /* AppDelegate.swift */; };
 		2095EFF61FCADCF70084EA09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2095EFF41FCADCF70084EA09 /* Main.storyboard */; };
 		2095EFF81FCADCF70084EA09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2095EFF71FCADCF70084EA09 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		205558001FCCA41A00D32AEB /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		2095EFED1FCADCF70084EA09 /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2095EFF01FCADCF70084EA09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2095EFF51FCADCF70084EA09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				2095F0211FCB39900084EA09 /* FlickrAPI.swift */,
+				205558001FCCA41A00D32AEB /* PhotoStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				2095F0221FCB39900084EA09 /* FlickrAPI.swift in Sources */,
 				2095EFF11FCADCF70084EA09 /* AppDelegate.swift in Sources */,
+				205558011FCCA41A00D32AEB /* PhotoStore.swift in Sources */,
 				2095F01F1FCB31CF0084EA09 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
