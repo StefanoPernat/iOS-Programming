@@ -15,12 +15,26 @@ enum Method: String {
 struct FlickrAPI {
     // MARK: - Type methods and variable
     private static let baseURLString = "https://api.flickr.com/services/rest"
+    private static let apiKey = "a6d819499131071f158fd740860a5a88"
     
     // this method will build the requested url based on method
     // with the specified parameters
     private static func flickrURL(method: Method,
                                   parameters: [String: String]?) -> URL {
-        return URL(string: "")!
+        
+        // url components is set initially to the base URL
+        var components = URLComponents(string: baseURLString)!
+        var queryItems = [URLQueryItem]()
+        
+        if let additionalParameters = parameters {
+            for (key, value) in additionalParameters {
+                let item = URLQueryItem(name: key, value: value)
+                queryItems.append(item)
+            }
+        }
+        
+        components.queryItems = queryItems
+        return components.url!
     }
     
     // MARK: - built URLs
