@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum FlickrError: Error {
+    case invalidJSONData
+}
+
 enum Method: String {
     case interestingPhotos = "flickr.interestingness.getList"
 }
