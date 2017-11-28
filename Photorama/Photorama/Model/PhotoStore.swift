@@ -8,12 +8,30 @@
 
 import Foundation
 
+enum PhotoResult {
+    case success([Photo])
+    case failure(Error)
+}
+
 class PhotoStore {
     private let session: URLSession = {
         let config = URLSessionConfiguration.default
         return URLSession(configuration: config)
     }()
     
+    // MARK: - PhotoStore static methods
+    static func photos (fromJSON data: Data) -> PhotoResult {
+        do {
+            let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+            
+            var finalPhotos = [Photo]()
+            return .success(finalPhotos)
+        } catch let error {
+            return .failure(error)
+        }
+    }
+    
+    // MARK: - PhotoStore instance methods
     func fetchInterestingPhotos() {
         let url = FlickrAPI.interestingPhotos
         let request = URLRequest(url: url)
