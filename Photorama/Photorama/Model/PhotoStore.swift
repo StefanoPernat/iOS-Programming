@@ -19,25 +19,6 @@ class PhotoStore {
         return URLSession(configuration: config)
     }()
     
-    // MARK: - PhotoStore static methods
-    static func photos (fromJSON data: Data) -> PhotoResult {
-        do {
-            let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
-            
-            guard
-                let jsonDictionary = jsonObject as? [AnyHashable: Any],
-                let photos = jsonDictionary["photos"] as? [String: Any],
-                let photosArray = photos["photo"] as? [[String: Any]]
-            else {
-                return .failure(FlickrError.invalidJSONData)
-            }
-            
-            var finalPhotos = [Photo]()
-            return .success(finalPhotos)
-        } catch let error {
-            return .failure(error)
-        }
-    }
     
     // MARK: - PhotoStore instance methods
     func fetchInterestingPhotos() {
