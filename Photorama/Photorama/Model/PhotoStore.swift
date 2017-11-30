@@ -14,7 +14,7 @@ enum ImageResult {
 }
 
 enum PhotoError: Error {
-    case ImageCreationError
+    case imageCreationError
 }
 
 enum PhotoResult {
@@ -35,6 +35,20 @@ class PhotoStore {
         }
         
         return FlickrAPI.photos(fromJSON: jsonData)
+    }
+    
+    private func processImageRequest(data: Data?, error: Error?) -> ImageResult {
+        guard
+            let imageData = data,
+            let image = UIImage(data: imageData) else {
+                if data == nil {
+                    return .failure(error!)
+                } else {
+                    return .failure(PhotoError.imageCreationError)
+                }
+        }
+        
+        return .success(image)
     }
     
     // MARK: - Fetching methods
