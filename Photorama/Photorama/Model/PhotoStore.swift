@@ -6,7 +6,16 @@
 //  Copyright © 2017 Stefano Pernat. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+enum ImageResult {
+    case success(UIImage)
+    case failure(Error)
+}
+
+enum PhotoError: Error {
+    case ImageCreationError
+}
 
 enum PhotoResult {
     case success([Photo])
@@ -37,6 +46,17 @@ class PhotoStore {
             
             let result = self.processPhotoRequest(data: data, error: error)
             completition(result)
+        }
+        task.resume()
+    }
+    
+    func fetchImage(for photo: Photo, completition: @escaping (ImageResult) -> Void) {
+        let photoURL = photo.remoteUrl
+        let request = URLRequest(url: photoURL)
+        
+        let task = session.dataTask(with: request) {
+            (data, response, error) -> Void in
+            
         }
         task.resume()
     }
