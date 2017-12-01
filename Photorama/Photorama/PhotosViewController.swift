@@ -20,14 +20,30 @@ class PhotosViewController : UIViewController {
         super.viewDidLoad()
         
         store.fetchInterestingPhotos {
-            (photosResult) -> Void in
+            [unowned self] (photosResult) -> Void in
             
             switch photosResult {
             case let .success(photos):
                 print("Successfully found \(photos.count) photos")
+                if let firtstPhoto = photos.first {
+                    self.updateImageView(for: firtstPhoto)
+                }
             case let .failure(error):
                 print("Error fetching interesting photos: \(error)")
             
+            }
+        }
+    }
+    
+    func updateImageView(for photo: Photo) {
+        store.fetchImage(for: photo) {
+            [unowned self ] imageResult -> Void in
+            
+            switch imageResult {
+            case let .success(image):
+                self.imageView.image = image
+            case let .failure(error):
+                print("Error downloading image: \(error)")
             }
         }
     }
