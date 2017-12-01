@@ -59,7 +59,9 @@ class PhotoStore {
             (data, response, error) -> Void in
             
             let result = self.processPhotoRequest(data: data, error: error)
-            completition(result)
+            OperationQueue.main.addOperation {
+                completition(result)
+            }
         }
         task.resume()
     }
@@ -72,7 +74,9 @@ class PhotoStore {
             (data, response, error) -> Void in
             
             let result = self.processImageRequest(data: data, error: error)
-            completition(result)
+            OperationQueue.main.addOperation {
+                completition(result)
+            }
         }
         task.resume()
     }
