@@ -32,7 +32,7 @@ class PhotosViewController : UIViewController {
                 print("Error fetching interesting photos: \(error)")
             
             }
-        }*/
+        }
         
         store.fetchRecentPhotos {
             [unowned self] (photoResult) -> Void in
@@ -46,7 +46,7 @@ class PhotosViewController : UIViewController {
             case let .failure(error):
                 print("Error fetching recent photos \(error)")
             }
-        }
+        }*/
     }
     
     func updateImageView(for photo: Photo) {
