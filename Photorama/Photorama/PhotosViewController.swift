@@ -19,7 +19,7 @@ class PhotosViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        store.fetchInterestingPhotos {
+        /*store.fetchInterestingPhotos {
             [unowned self] (photosResult) -> Void in
             
             switch photosResult {
@@ -31,6 +31,20 @@ class PhotosViewController : UIViewController {
             case let .failure(error):
                 print("Error fetching interesting photos: \(error)")
             
+            }
+        }*/
+        
+        store.fetchRecentPhotos {
+            [unowned self] (photoResult) -> Void in
+            
+            switch photoResult {
+            case let .success(photos):
+                print("successfully found \(photos.count) photos")
+                if let firstPhoto = photos.first {
+                    self.updateImageView(for: firstPhoto)
+                }
+            case let .failure(error):
+                print("Error fetching recent photos \(error)")
             }
         }
     }
