@@ -123,4 +123,13 @@ Added variation for a better landscape UI, solved also bronze challenge
 
 In this chapter I learned about UIResponder callback methods to handle touches on a UIView
 
-## Web Services 
+## Web Services
+
+In this chapter I learned about using the URLSession class for downloading content from a webservice, I used also the URLRequest class.
+
+I improved a lot my knowledge of closures
+
+> **Bronze Challenge**: Printing the response information
+
+> **Silver Challenge**: Fetch Recent photos
+ 
