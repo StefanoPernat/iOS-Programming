@@ -12,53 +12,28 @@ class PhotosViewController : UIViewController {
     
     // MARK: - Variables
     var store: PhotoStore!
+    var photoDataSource = PhotoDataSource()
     
     // MARK: - Outlets
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*store.fetchInterestingPhotos {
+        collectionView.dataSource = photoDataSource
+        
+        store.fetchInterestingPhotos {
             [unowned self] (photosResult) -> Void in
             
             switch photosResult {
             case let .success(photos):
                 print("Successfully found \(photos.count) photos")
-                if let firtstPhoto = photos.first {
-                    self.updateImageView(for: firtstPhoto)
-                }
+                self.photoDataSource.photos = photos
             case let .failure(error):
                 print("Error fetching interesting photos: \(error)")
-            
+                self.photoDataSource.photos.removeAll()
             }
-        }
-        
-        store.fetchRecentPhotos {
-            [unowned self] (photoResult) -> Void in
-            
-            switch photoResult {
-            case let .success(photos):
-                print("successfully found \(photos.count) photos")
-                if let firstPhoto = photos.first {
-                    self.updateImageView(for: firstPhoto)
-                }
-            case let .failure(error):
-                print("Error fetching recent photos \(error)")
-            }
-        }*/
-    }
-    
-    func updateImageView(for photo: Photo) {
-        store.fetchImage(for: photo) {
-            [unowned self ] imageResult -> Void in
-            
-            switch imageResult {
-            case let .success(image):
-                self.imageView.image = image
-            case let .failure(error):
-                print("Error downloading image: \(error)")
-            }
+            self.collectionView.reloadSections(IndexSet(integer: 0))
         }
     }
 }
