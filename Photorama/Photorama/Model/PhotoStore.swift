@@ -57,6 +57,8 @@ class PhotoStore {
         let request = URLRequest(url: url)
         let task = session.dataTask(with: request) {
             (data, response, error) -> Void in
+            let httpResponse = response as! HTTPURLResponse
+            print("fetching interesting photos json response:\nstatusCode:\(httpResponse.statusCode)\n\(httpResponse.allHeaderFields)")
             
             let result = self.processPhotoRequest(data: data, error: error)
             OperationQueue.main.addOperation {
@@ -72,6 +74,8 @@ class PhotoStore {
         
         let task = session.dataTask(with: request) {
             (data, response, error) -> Void in
+            let httpResponse = response as! HTTPURLResponse
+            print("fetching images response: \nstatusCode:\(httpResponse.statusCode)\n\(httpResponse.allHeaderFields)")
             
             let result = self.processImageRequest(data: data, error: error)
             OperationQueue.main.addOperation {
