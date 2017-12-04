@@ -107,6 +107,7 @@
 		2095EFEF1FCADCF70084EA09 /* Photorama */ = {
 			isa = PBXGroup;
 			children = (
+				204F71611FD46C3700EC247A /* PhotoDataSource.swift */,
 				2095F0201FCB39570084EA09 /* Model */,
 				2095EFF01FCADCF70084EA09 /* AppDelegate.swift */,
 				2095EFF41FCADCF70084EA09 /* Main.storyboard */,
@@ -142,7 +143,6 @@
 			children = (
 				2095F0211FCB39900084EA09 /* FlickrAPI.swift */,
 				205558001FCCA41A00D32AEB /* PhotoStore.swift */,
-				204F71611FD46C3700EC247A /* PhotoDataSource.swift */,
 				207CF2101FCDDB9B00306F08 /* Photo.swift */,
 			);
 			path = Model;
