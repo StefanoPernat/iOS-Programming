@@ -28,14 +28,30 @@
                                     <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="nxn-WA-F18">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="nxn-WA-F18" customClass="PhotoCollectionViewCell" customModule="Photorama" customModuleProvider="target">
                                         <rect key="frame" x="2" y="2" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8bw-0z-hFX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="rgO-r2-p0C">
+                                                    <rect key="frame" x="35" y="35" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8bw-0z-hFX" secondAttribute="trailing" id="3v9-66-p8f"/>
+                                            <constraint firstItem="8bw-0z-hFX" firstAttribute="top" secondItem="nxn-WA-F18" secondAttribute="top" id="533-Iv-CRZ"/>
+                                            <constraint firstItem="rgO-r2-p0C" firstAttribute="centerY" secondItem="8bw-0z-hFX" secondAttribute="centerY" id="5FF-lN-t3Q"/>
+                                            <constraint firstAttribute="bottom" secondItem="8bw-0z-hFX" secondAttribute="bottom" id="6qe-Lh-N2P"/>
+                                            <constraint firstItem="8bw-0z-hFX" firstAttribute="leading" secondItem="nxn-WA-F18" secondAttribute="leading" id="DIb-gl-Zxh"/>
+                                            <constraint firstItem="rgO-r2-p0C" firstAttribute="centerX" secondItem="8bw-0z-hFX" secondAttribute="centerX" id="K3k-o5-kkU"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
