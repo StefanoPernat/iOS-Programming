@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		204F71621FD46C3700EC247A /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F71611FD46C3700EC247A /* PhotoDataSource.swift */; };
+		204F71641FD47A9100EC247A /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F71631FD47A9100EC247A /* PhotoCollectionViewCell.swift */; };
 		205558011FCCA41A00D32AEB /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205558001FCCA41A00D32AEB /* PhotoStore.swift */; };
 		207CF2111FCDDB9B00306F08 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CF2101FCDDB9B00306F08 /* Photo.swift */; };
 		2095EFF11FCADCF70084EA09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095EFF01FCADCF70084EA09 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		204F71611FD46C3700EC247A /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoDataSource.swift; path = Photorama/PhotoDataSource.swift; sourceTree = SOURCE_ROOT; };
+		204F71631FD47A9100EC247A /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		205558001FCCA41A00D32AEB /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		207CF2101FCDDB9B00306F08 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		2095EFED1FCADCF70084EA09 /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 				2095F0201FCB39570084EA09 /* Model */,
 				2095EFF01FCADCF70084EA09 /* AppDelegate.swift */,
 				2095EFF41FCADCF70084EA09 /* Main.storyboard */,
+				204F71631FD47A9100EC247A /* PhotoCollectionViewCell.swift */,
 				2095EFF71FCADCF70084EA09 /* Assets.xcassets */,
 				2095EFF91FCADCF70084EA09 /* LaunchScreen.storyboard */,
 				2095EFFC1FCADCF70084EA09 /* Info.plist */,
@@ -283,6 +286,7 @@
 				2095EFF11FCADCF70084EA09 /* AppDelegate.swift in Sources */,
 				205558011FCCA41A00D32AEB /* PhotoStore.swift in Sources */,
 				204F71621FD46C3700EC247A /* PhotoDataSource.swift in Sources */,
+				204F71641FD47A9100EC247A /* PhotoCollectionViewCell.swift in Sources */,
 				2095F01F1FCB31CF0084EA09 /* PhotosViewController.swift in Sources */,
 				207CF2111FCDDB9B00306F08 /* Photo.swift in Sources */,
 			);
