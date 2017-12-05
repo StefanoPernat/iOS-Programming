@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotosViewController : UIViewController {
+class PhotosViewController : UIViewController, UICollectionViewDelegate {
     
     // MARK: - Variables
     var store: PhotoStore!
@@ -21,6 +21,7 @@ class PhotosViewController : UIViewController {
         super.viewDidLoad()
         
         collectionView.dataSource = photoDataSource
+        collectionView.delegate = self
         
         store.fetchInterestingPhotos {
             [unowned self] (photosResult) -> Void in
@@ -34,6 +35,27 @@ class PhotosViewController : UIViewController {
                 self.photoDataSource.photos.removeAll()
             }
             self.collectionView.reloadSections(IndexSet(integer: 0))
+        }
+    }
+    
+    // MARK: - Delegate methods
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let photo = photoDataSource.photos[indexPath.row]
+        
+        // download the image data
+        store.fetchImage(for: photo) {
+            [unowned self] (result) -> Void in
+            
+            // find the most recent indexPath
+            guard let photoIndex = self.photoDataSource.photos.index(of: photo),
+                case let .success(image) = result else {
+                    return
+            }
+            
+            let photoIndexPath = IndexPath(item: photoIndex, section: 0)
+            if let cell = self.collectionView.cellForItem(at: photoIndexPath) as? PhotoCollectionViewCell {
+                cell.update(with: image)
+            }
         }
     }
 }

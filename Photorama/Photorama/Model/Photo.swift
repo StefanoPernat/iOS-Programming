@@ -20,5 +20,11 @@ class Photo {
         self.dateTaken  = dateTaken
         self.remoteUrl  = remoteUrl
     }
-    
+}
+
+// MARK: - Conforming to Equitable protocol
+extension Photo: Equatable {
+    static func ==(lhs: Photo, rhs: Photo) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
