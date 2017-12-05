@@ -1,6 +1,6 @@
 //
 //  ImageStore.swift
-//  Homepwner
+//  Photorama
 //
 //  Created by Stefano Pernat on 12/11/17.
 //  Copyright © 2017 Stefano Pernat. All rights reserved.
