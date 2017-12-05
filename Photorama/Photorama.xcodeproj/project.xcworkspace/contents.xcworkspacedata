@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Photorama.xcodeproj">
+      location = "group:/Users/stefanopernat/Code/Swift/The Big Nerd Ranch Guide iOS Programming 6th Edition/iOS-Programming/Photorama/Photorama/ImageStore.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
