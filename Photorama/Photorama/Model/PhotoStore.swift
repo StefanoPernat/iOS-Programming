@@ -28,6 +28,8 @@ class PhotoStore {
         return URLSession(configuration: config)
     }()
     
+    let imageStore = ImageStore()
+    
     // MARK: - process data from webserver
     private func processPhotoRequest(data: Data?, error: Error?) -> PhotoResult {
         guard let jsonData = data else {
@@ -85,13 +87,24 @@ class PhotoStore {
     func fetchImage(for photo: Photo, completition: @escaping (ImageResult) -> Void) {
         let photoURL = photo.remoteUrl
         let request = URLRequest(url: photoURL)
+        let photoKey = photo.id
+        
+        if let image = imageStore.image(forKey: photoKey) {
+            OperationQueue.main.addOperation {
+                completition(.success(image))
+            }
+            return
+        }
         
         let task = session.dataTask(with: request) {
-            (data, response, error) -> Void in
-            let httpResponse = response as! HTTPURLResponse
-            print("fetching images response: \nstatusCode:\(httpResponse.statusCode)\n\(httpResponse.allHeaderFields)")
+            [unowned self] (data, response, error) -> Void in
             
             let result = self.processImageRequest(data: data, error: error)
+            
+            if case let .success(image) = result {
+                self.imageStore.setImage(image, forKey: photoKey)
+            }
+            
             OperationQueue.main.addOperation {
                 completition(result)
             }
