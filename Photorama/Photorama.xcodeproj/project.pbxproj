@@ -11,6 +11,7 @@
 		204F71641FD47A9100EC247A /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F71631FD47A9100EC247A /* PhotoCollectionViewCell.swift */; };
 		205558011FCCA41A00D32AEB /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205558001FCCA41A00D32AEB /* PhotoStore.swift */; };
 		2071CAE51FD7274900AD4000 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071CAE41FD7274900AD4000 /* ImageStore.swift */; };
+		2071CAE71FD730A700AD4000 /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071CAE61FD730A700AD4000 /* PhotoInfoViewController.swift */; };
 		207CF2111FCDDB9B00306F08 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CF2101FCDDB9B00306F08 /* Photo.swift */; };
 		2095EFF11FCADCF70084EA09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2095EFF01FCADCF70084EA09 /* AppDelegate.swift */; };
 		2095EFF61FCADCF70084EA09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2095EFF41FCADCF70084EA09 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		204F71631FD47A9100EC247A /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		205558001FCCA41A00D32AEB /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		2071CAE41FD7274900AD4000 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageStore.swift; path = "/Users/stefanopernat/Code/Swift/The Big Nerd Ranch Guide iOS Programming 6th Edition/iOS-Programming/Photorama/Photorama/ImageStore.swift"; sourceTree = "<absolute>"; };
+		2071CAE61FD730A700AD4000 /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
 		207CF2101FCDDB9B00306F08 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		2095EFED1FCADCF70084EA09 /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2095EFF01FCADCF70084EA09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				2095EFF91FCADCF70084EA09 /* LaunchScreen.storyboard */,
 				2095EFFC1FCADCF70084EA09 /* Info.plist */,
 				2095F01E1FCB31CF0084EA09 /* PhotosViewController.swift */,
+				2071CAE61FD730A700AD4000 /* PhotoInfoViewController.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				204F71641FD47A9100EC247A /* PhotoCollectionViewCell.swift in Sources */,
 				2095F01F1FCB31CF0084EA09 /* PhotosViewController.swift in Sources */,
 				207CF2111FCDDB9B00306F08 /* Photo.swift in Sources */,
+				2071CAE71FD730A700AD4000 /* PhotoInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
